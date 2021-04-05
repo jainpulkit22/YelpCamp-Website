@@ -7,6 +7,10 @@ router.get("/register", function(req,res){
     res.render("register")
 })
 
+router.get("/", function(req, res){
+    res.redirect("/campgrounds")
+})
+
 // handling the sign up 
 router.post("/register", function(req, res){
     var newUser = new User({username: req.body.username});
